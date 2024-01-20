@@ -3,7 +3,7 @@ FROM alpine
 # 设置工作目录
 WORKDIR /workspace/app
 
-RUN apt-get update && apt-get install -y curl wget && \
+RUN apk add --no-cache curl wget && \
     curl -L $(curl -s  https://api.github.com/repos/Harry-zklcdc/go-proxy-bingai/releases/latest | grep /go-proxy-bingai-linux-amd64.tar.gz | cut -d '"' -f 4) -o go-proxy-bingai-linux-amd64.tar.gz && \
     tar -zxvf go-proxy-bingai-linux-amd64.tar.gz && \
     chmod +x go-proxy-bingai
