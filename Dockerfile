@@ -4,7 +4,7 @@ FROM alpine
 WORKDIR /workspace/app
 
 RUN apk add --no-cache curl wget && \
-    curl -L https://github.com/Harry-zklcdc/go-bingai-pass/releases/latest/download/go-proxy-bingai-linux-amd64.tar.gz -o go-proxy-bingai-linux-amd64.tar.gz && \
+    curl -L https://github.com/Harry-zklcdc/go-proxy-bingai/releases/latest/download/go-proxy-bingai-linux-amd64.tar.gz -o go-proxy-bingai-linux-amd64.tar.gz && \
     tar -zxvf go-proxy-bingai-linux-amd64.tar.gz && \
     chmod +x go-proxy-bingai
 
